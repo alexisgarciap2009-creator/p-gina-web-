@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Vida | Repostería Saludable</title>
+    <style>
+        /* Estilos Generales y Colores Suaves/Naturales */
+        :root {
+            --color-primario: #8FBC8F; /* Verde suave (DarkSeaGreen) */
+            --color-secundario: #5D4037; /* Marrón tierra */
+            --color-fondo: #FDFBF7; /* Crema muy claro */
+            --color-blanco: #ffffff;
+            --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+            background-color: var(--color-fondo);
+            color: var(--color-secundario);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: var(--color-blanco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primario);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-secundario);
+            font-weight: 500;
+        }
+
+        /* Sección Hero (Inicio) */
+        .hero {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .btn {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3e2b24;
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 3rem 10%;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--color-primario);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Historia y Objetivo */
+        .nosotros-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .nosotros-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Productos */
+        .productos-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .producto-card {
+            background: var(--color-blanco);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .precio {
+            font-size: 1.5rem;
+            color: var(--color-primario);
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Beneficios */
+        .beneficios-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .beneficios-list li {
+            background-color: #e8f5e9;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dulce Vida</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Historia</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Repostería Saludable</h1>
+        <p>Postres veganos, saludables y sustentables. Una alimentación consciente también puede ser deliciosa.</p>
+        <a href="#menu" class="btn">Ver Menú</a>
+    </section>
+
+    <section id="nosotros">
+        <h2>Nuestra Historia</h2>
+        <div class="nosotros-grid">
+            <div>
+                <h3>¿Quiénes somos?</h3>
+                <p>Dulce Vida es un proyecto de emprendimiento enfocado en la elaboración de productos dulces sin azúcar y sin gluten. Buscamos ofrecer opciones seguras para personas que cuidan su alimentación o tienen intolerancias.</p>
+            </div>
+            <div>
+                <h3>Nuestro Objetivo</h3>
+                <p>Ofrecer postres veganos y saludables con ingredientes naturales y locales. Promovemos el bienestar, la sustentabilidad y el consumo responsable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" style="background-color: #fff;">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-container">
+            <div class="producto-card">
+                <h3>Brownie Vegano</h3>
+                <p>Delicioso sabor a chocolate, sin culpas.</p>
+                <span class="precio">$30.00</span>
+                <p><small>Individual / Paquetes</small></p>
+            </div>
+            <div class="producto-card">
+                <h3>Cheesecake Vegano</h3>
+                <p>Cremoso, natural y libre de lácteos.</p>
+                <span class="precio">$35.00</span>
+                <p><small>Individual / Paquetes</small></p>
+            </div>
+            <div class="producto-card">
+                <h3>Galletas Veganas</h3>
+                <p>Crujientes, perfectas para acompañar tu café.</p>
+                <span class="precio">$40.00</span>
+                <p><small>Individual / Paquetes</small></p>
+            </div>
+        </div>
+        <p style="margin-top: 20px;"><em>*Disponibles en presentaciones individuales, o paquetes de 6 y 12 piezas.</em></p>
+    </section>
+
+    <section id="beneficios">
+        <h2>¿Por qué elegir Dulce Vida?</h2>
+        <ul class="beneficios-list">
+            <li>🌱 <strong>Impacto Social:</strong> Inclusión para celíacos y diabéticos.</li>
+            <li>💰 <strong>Impacto Económico:</strong> Apoyo a productores locales.</li>
+            <li>♻️ <strong>Impacto Ambiental:</strong> Empaques ecológicos y responsables.</li>
+            <li>❤️ <strong>Salud:</strong> Sin azúcar refinada, sin gluten, 100% Vegano.</li>
+        </ul>
+    </section>
+
+    <footer id="contacto">
+        <h3>Dulce Vida – Repostería Saludable</h3>
+        <p>Pedidos especiales para eventos disponibles.</p>
+        <p>Escanea nuestro código QR para ver nuestra planeación y procesos.</p>
+        <p>&copy; 2024 Dulce Vida. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
